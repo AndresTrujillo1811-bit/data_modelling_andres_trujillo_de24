@@ -27,4 +27,4 @@ b) see image above
 c) see image in a) 
 
 
-
+d) see exercise1_hospital.dbml

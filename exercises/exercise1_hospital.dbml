@@ -1,0 +1,42 @@
+TABLE Hospital {
+  hospital_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+  address VARCHAR(100) [not null]
+}
+
+
+
+TABLE Department {
+  department_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+}
+
+
+
+TABLE Doctor {
+  doctor_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+}
+
+
+
+TABLE HospitalDoctor {
+  doctor_id INTEGER [not null, ref: > Doctor.doctor_id]
+  hospital_id INTEGER [not null, ref: > Hospital.hospital_id]
+  indexes {
+    (hospital_id, doctor_id) [pk]
+  }
+}
+
+
+TABLE DepartmentDoctor {
+  department_id INTEGER [not null, ref: > Department.department_id]
+  doctor_id INTEGER [not null, ref: > Doctor.doctor_id]
+}
+
+
+
+TABLE HospitalDepartment {
+  hospital_id INTEGER [not null, ref: > Hospital.hospital_id]
+  department_id INTEGER [not null, ref: > Department.department_id]
+}
