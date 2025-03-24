@@ -32,4 +32,4 @@ VALUES
 SELECT
     *
 FROM
-    customer;   
+    customer; 
