@@ -1,0 +1,92 @@
+TABLE Student {
+  student_id SERIAL [primary key]
+  first_name VARCHAR(50) [not null]
+  last_name VARCHAR(100) [not null]
+  personal_number CHAR(12)
+  email VARCHAR(255) [unique, not null]
+}
+
+
+TABLE Class {
+  class_id SERIAL [primary key]
+  name VARCHAR(30) [not null]
+  program_id INTEGER [not null]
+  starting_year INTEGER [not null]
+}
+
+
+TABLE TrainingLeader {
+  leader_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+  email VARCHAR(255) [unique, not null]
+}
+
+
+TABLE Course {
+  course_id SERIAL [primary key]
+  name VARCHAR(30) [not null]
+  code VARCHAR(12) [not null]
+  point INTEGER [not null]
+  description TEXT [not null]
+}
+
+
+TABLE Program {
+  program_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+  description TEXT [not null]
+}
+
+
+TABLE Trainer {
+  trainer_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+  email VARCHAR(255) [not null]
+  
+}
+
+
+TABLE Consult {
+  consult_id SERIAL [primary key]
+  name VARCHAR(50) [not null]
+  organization_number INTEGER [not null]
+  f_tax TEXT [not null]
+  address VARCHAR(100) [not null]
+  hourly_honorarium INTEGER [not null]
+}
+
+
+TABLE StudentClass {
+  student_id INTEGER [not null, ref: > Student.student_id]
+  class_id INTEGER [not null, ref: > Class.class_id]
+}
+
+
+TABLE ClassLeader {
+  class_id INTEGER [not null, ref: > Class.class_id]
+  leader_id INTEGER [not null, ref: > TrainingLeader.leader_id]
+}
+
+
+TABLE ClassCourse {
+  class_id INTEGER [not null, ref: > Class.class_id]
+  course_id INTEGER [not null, ref: > Course.course_id]
+}
+
+
+TABLE CourseProgram {
+  course_id INTEGER [not null, ref: > Course.course_id]
+  program_id INTEGER [not null, ref: > Program.program_id]
+}
+
+
+TABLE CourseTrainer {
+  course_id INTEGER [not null, ref: > Course.course_id]
+  trainer_id INTEGER [not null, ref: > Trainer.trainer_id]
+}
+
+
+TABLE ConsultTrainer {
+  trainer_id INTEGER [not null, ref: > Trainer.trainer_id]
+  consult_id INTEGER [not null, ref: > Consult.consult_id]
+}
