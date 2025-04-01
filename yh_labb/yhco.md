@@ -7,7 +7,7 @@ b) Conceptual Model
 
 **Entities** 
 
-Student(student_id, first_name, last_name, personnumber, email)
+Student(student_id, first_name, last_name, personal_number, email)
 
 Course(course_id, name, code)
 
