@@ -1,29 +1,17 @@
 ## Uppgift 0 - datamodellering 
 
-b) Conceptual Model 
+b, c) Conceptual model 
 
 <img src="assets/conceptual_model.png">
 
 
 
-c) Logical Model 
+d) Logical model 
 
 <img src="assets/logical_model.png">
 
 
 
+e) Physical model
 
-**Entities** 
-
-Student(student_id, first_name, last_name, personal_number, email)
-
-Course(course_id, name, code)
-
-Class(class_id, name, program_id, starting_year)
-
-
-
-
-
-
-
+- see yh_tables.dbml
