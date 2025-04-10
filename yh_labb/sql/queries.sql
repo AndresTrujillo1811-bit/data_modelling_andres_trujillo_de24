@@ -4,7 +4,7 @@ SET search_path TO yrkes_co;
 -- Testqueries 
 
 
--- Getting all students and which class they belong to 
+-- Getting students and which class they belong to 
 
 SELECT S.first_name, S.last_name, C.name AS Program
 FROM Student S
