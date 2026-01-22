@@ -23,6 +23,6 @@ er.edge('Utbildare', 'Konsult', label='kan vara')
 er.edge('Ort', 'Program', label='finns i')
 
 # Spara och rendera diagrammet
-er_path = "/mnt/data/er_diagram.png"
+er_path = "yh_labb/assets/er_diagram.png"
 er.render(er_path, format="png", cleanup=True)
 er_path
