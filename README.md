@@ -1,4 +1,4 @@
-# data_modelling_andres_trujillo_de24
-Learning data modelling 
+# data_modeling_andres_trujillo_de24
+This is a learning repository of data modeling course.
 
-# Check yh_labb to see my project!
+Check yh_labb to see my project!
